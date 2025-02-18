@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 @font-face {
@@ -41,25 +41,33 @@ picture img {
 
 
 /*--body --*/
-
-h1{
-    margin-top: 2rem;
-    margin-left: 1rem;
-}
-
-#sub-content{
+#sub-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100%;
-    padding: 1rem 1rem;
+    margin: 1.3rem;
+    position: relative;
+    max-width: 85vw;
 }
 
-#news-usecase p{
+#sub-container h1{
+    align-self: flex-start;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--Blue-800);
 }
+
+
+#news-usecase{
+    color: var(--Blue-700);
+    font-weight: 500;
+}
+
+#news-usecase p {
+    margin-bottom: 1.1rem;
+}
+
 
 ul{
     list-style: none;
@@ -67,15 +75,89 @@ ul{
 }
 
 li{
-    display: flex;
-    align-items: center;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 li::before{
     content: "";
-    display: inline-block;
-    background-image: url(newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg);
+    background: url(newsletter-sign-up-with-success-message-main/assets/images/icon-list.svg) no-repeat center;
     background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.1rem;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
 }
+
+
+/* ---form--- */
+
+form {
+    margin-top: 2rem;
+}
+
+#email, button{
+    width: 100%;
+}
+
+form input{
+    padding: 0.7rem 0.8rem;
+    border-radius: 7px;
+    border: 1px solid var(--Grey);
+    margin-bottom: 1rem;
+}
+
+form label{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--Blue-700);
+    margin-bottom: 0.5rem;
+}
+
+label #error {
+    color: var(--Red);
+    display: none;
+}
+
+form button{
+    padding: 0.9rem 0.8rem;
+    margin-bottom: 1rem;
+    color: var(--White);
+    background-color: var(--Blue-700);
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+
+input:focus-within:invalid{
+    border: 1px var(--Red) solid;
+    color: var(--Red);
+}
+
+
+/* ---tablet --- */
+@media (min-width: 768px){
+    /* picture {
+
+    } */
+    picture img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        clip-path:  0 0 0 round 5px 5px 5px 5px;
+    }
+
+    #news-letter-items{
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 50% 50%;
+        justify-content:center;
+        align-items:center ;
+        height: 100vh;
+    }
+}
+
