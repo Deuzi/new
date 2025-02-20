@@ -131,11 +131,20 @@ form button{
     font-weight: 700;
 }
 
-
-input:focus-within:invalid{
-    border: 1px var(--Red) solid;
+input:invalid:not(:placeholder-shown){
+    border: 2px solid var(--Red) !important;
     color: var(--Red);
+    background-color: #FFE7E6;
 }
+
+/* input:valid {
+    border: 2px solid green !important;
+} */
+/* input:invalid{
+    border: 1px solid var(--Red) ;
+    color: var(--Red);
+    background-color: #FFE7E6;
+} */
 
 
 /* ---tablet --- */
