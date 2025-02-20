@@ -172,7 +172,7 @@ input:focus-within:invalid{
         object-fit: cover; 
         border-radius: 1rem;
     }
-
+    
     #news-letter-items{
         display: grid;
         grid-template-rows: 50% 50%;
@@ -186,56 +186,71 @@ input:focus-within:invalid{
 /* --- big-screens ---*/
 
 @media (min-width: 1020px){
-       #news-letter-items{
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 1fr;
-            justify-content:center;
-            align-items:center ;
-            height: auto;
-            width: 100%; 
-                
-        }
-        .hero-section{
-            grid-column: 2;
-            grid-row: 1;
-            height: 641px;
-        }
-        
-        .sub-container{
-            grid-column: 1;
-            grid-row: 1;
-        }
+    #news-letter-items{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        justify-content:center;
+        align-items:center ;
+        height: auto;
+        width: 100%;
+        max-width: 840px; 
+            
+    }
+    .hero-section{
+        height: 593px;
+        grid-column: 2;
+        grid-row: 1;
+        width: 400px;
+        padding: 0;
+    }
+    picture img {
+        width: 100%;
+        height: 100%; 
+        object-fit: contain; 
+    }
 
         
+    #sub-container{
+        grid-column: 1;
+        grid-row: 1;
+    }
         
-        #sub-container h1{
-            align-self: flex-start;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            color: var(--Blue-800);
-        }
-        
-        
-        #news-usecase{
-            color: var(--Blue-700);
-            font-weight: 500;
-        }
-        
-        #news-usecase p {
-            margin-bottom: 1.1rem;
-        }
+    #sub-container h1{
+        align-self: normal;
+        font-size: 2.5rem;
+        margin-bottom: 1.3rem;
+            
+    }
         
         
-        ul{
-            list-style: none;
-            padding-left: 0;
-        }
+    #news-usecase{
+        color: var(--Blue-700);
+        font-weight: 550;
+    }
         
-        li{
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
+    #news-usecase p {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+        
+        
+    ul{
+        list-style: none;
+        padding-left: 0;
+        margin-top: 2rem 0;
+    }
+
+    
+    form {
+        margin-top: 2.7rem;
+    }
+
+    form label{
+        font-weight: 600;
+    }
+
+
+
 }
 
