@@ -193,6 +193,7 @@ form input:invalid:not(:placeholder-shown){
 
     form button:active{
         background: linear-gradient(#FF6A3A, #FF527B);
+        border: #ff6257;
     }
 }
 
