@@ -137,14 +137,10 @@ form input:invalid:not(:placeholder-shown){
     background-color: #FFE7E6;
 }
 
-/* input:valid {
-    border: 2px solid green !important;
-} */
-/* input:invalid{
-    border: 1px solid var(--Red) ;
-    color: var(--Red);
-    background-color: #FFE7E6;
-} */
+form button:active{
+    background: linear-gradient(#FF6A3A, #FF527B);
+    border: #ff6257;
+}
 
 
 /* ---tablet --- */
@@ -191,10 +187,6 @@ form input:invalid:not(:placeholder-shown){
         width: 100%;
     }
 
-    form button:active{
-        background: linear-gradient(#FF6A3A, #FF527B);
-        border: #ff6257;
-    }
 }
 
 /* --- big-screens ---*/
@@ -285,13 +277,14 @@ form input:invalid:not(:placeholder-shown){
 }
 
  #confirmation p {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--Blue-700);
 }
 
 #confirmation #user-email {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--Blue-800);
+    font-size: 1.1rem;
 }
 
 #confirmation button{
@@ -322,6 +315,8 @@ form input:invalid:not(:placeholder-shown){
     filter: blur(10px);
     z-index: -1;
 }
+
+
 
 @media(min-width: 500px){
     .thanks-msg{
